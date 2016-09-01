@@ -1,24 +1,12 @@
-
-class Base {
-	constructor(name) {
-		this.name = name
-	}
-	greeting() {
-		return 'Hello ' + this.name
-	}
-}
-
-class Extended extends Base {
-	constructor(name, surname) {
-		super(name)
-		this.surname = surname
-	}
-	greeting() {
-		return super.greeting() + ' ' + this.surname
-	}
-}
+import Base from './modules/Base'
+import Extended from './modules/Extended'
 
 let bc = new Base('Béla')
 let ec = new Extended('Józsi', 'Kovács')
-console.log(bc.greeting())
-console.log(ec.greeting())
+
+// Class names to the console
+console.log('Class is ready: ' + bc.constructor.name)
+console.log('Class is ready: ' + ec.constructor.name)
+
+// Test text output
+console.log('string: ' + ec.testText)
